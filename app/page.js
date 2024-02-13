@@ -1,18 +1,16 @@
 "use client"
 import { useEffect, useRef, useState } from "react";
-import { FiLock } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const Example = () => {
   return (
-    <div className="grid h-[100vh]  place-content-center bg-slate-900 p-4">
+    <div className="grid min-h-[100vh] place-content-center bg-slate-900 p-4">
       <EncryptButton />
     </div>
   );
 };
 
-const TARGET_TEXT =
-  "Is there a  Person Behind every story  or a Story behind every person? can you tell ????";
+const TARGET_TEXT = "is there a Person behind every Story or a Story Behind every person ?";
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
 
@@ -54,7 +52,6 @@ const EncryptButton = () => {
 
     setText(TARGET_TEXT);
   };
-
   useEffect(() => {
     scramble(); // Start the encryption process when the component mounts
   }, []); // Empty dependency array ensures it runs only once
@@ -67,12 +64,13 @@ const EncryptButton = () => {
       whileTap={{
         scale: 0.975,
       }}
-      className="group relative overflow-hidden rounded-lg   px-4 py-2 font-mono font-medium uppercase text-slate-300 transition-colors hover:text-indigo-300"
+      onMouseEnter={scramble}
+      onMouseLeave={stopScramble}
+      className="group relative overflow-hidden rounded-lg px-4 py-2 font-mono font-medium uppercase text-slate-300 transition-colors hover:text-indigo-300"
     >
-    <div className="relative z-10 flex items-center gap-2">
+      <div className="relative z-10 flex items-center gap-2">
         <span>{text}</span>
       </div>
-
       <motion.span
         initial={{
           y: "100%",
