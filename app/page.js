@@ -67,12 +67,12 @@ const EncryptButton = () => {
       whileTap={{
         scale: 0.975,
       }}
-      className="group relative overflow-hidden rounded-lg border-[1px] border-slate-500  px-4 py-2 font-mono font-medium uppercase text-slate-300 transition-colors hover:text-indigo-300"
+      className="group relative overflow-hidden rounded-lg   px-4 py-2 font-mono font-medium uppercase text-slate-300 transition-colors hover:text-indigo-300"
     >
-      <div className="relative z-10 p-[10vh] flex items-center w-[50vh] gap-2">
-        <FiLock size={40} />
-        <span>{text}</span>
-      </div>
+    <div className="relative flex z-10 p-3 items-center w-[80vh] gap-2 overflow-hidden">
+  <span>{text}</span>
+</div>
+
       <motion.span
         initial={{
           y: "100%",
