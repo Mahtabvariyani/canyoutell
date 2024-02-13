@@ -69,9 +69,9 @@ const EncryptButton = () => {
       }}
       className="group relative overflow-hidden rounded-lg   px-4 py-2 font-mono font-medium uppercase text-slate-300 transition-colors hover:text-indigo-300"
     >
-    <div className="relative flex z-10 p-3 items-center w-[80vh] gap-2 overflow-hidden">
-  <span>{text}</span>
-</div>
+    <div className="relative z-10 flex items-center gap-2">
+        <span>{text}</span>
+      </div>
 
       <motion.span
         initial={{
