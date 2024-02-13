@@ -10,7 +10,7 @@ const Example = () => {
   );
 };
 
-const TARGET_TEXT = "is there a Person behind every Story or a Story Behind every person ?";
+const TARGET_TEXT = "Is there a Person behind every Story or a Story Behind every person?";
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
 
