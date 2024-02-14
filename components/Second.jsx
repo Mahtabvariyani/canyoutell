@@ -20,11 +20,11 @@ const Example = () => {
   );
 };
 
-const TARGET_TEXT = "OR";
+const TARGET_TEXT = "OR a Story";
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
 
-const CHARS = "!@#<>/?";
+const CHARS = "!@#<>/?#$%^";
 
 const EncryptButton = () => {
   const intervalRef = useRef(null);

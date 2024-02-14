@@ -20,7 +20,7 @@ const Example = () => {
   );
 };
 
-const TARGET_TEXT = "a Story Behind every person?";
+const TARGET_TEXT = "Behind every person?";
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
 
