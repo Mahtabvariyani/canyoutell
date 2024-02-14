@@ -8,7 +8,7 @@ const Example = () => {
     useEffect(() => {
       const timeout = setTimeout(() => {
         setIsTextVisible(true); // Set the state to make the text visible after 1 second
-      }, 4500);
+      }, 4000);
   
       return () => clearTimeout(timeout); // Cleanup function
     }, []); // Empty dependency array ensures it runs only once
