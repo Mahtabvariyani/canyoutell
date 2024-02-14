@@ -14,7 +14,7 @@ const TARGET_TEXT = "Is there a Person behind every Story or a Story Behind ever
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
 
-const CHARS = "!@#$%^&*():{};|,.<>/?";
+const CHARS = "001011100010100001011100010100001011100010100001011100010100001011100010100";
 
 const EncryptButton = () => {
   const intervalRef = useRef(null);
