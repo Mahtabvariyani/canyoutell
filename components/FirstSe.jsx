@@ -1,16 +1,26 @@
-"use client";
+"use client"
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const Example = () => {
+    const [isTextVisible, setIsTextVisible] = useState(false);
+
+    useEffect(() => {
+      const timeout = setTimeout(() => {
+        setIsTextVisible(true); // Set the state to make the text visible after 1 second
+      }, 2000);
+  
+      return () => clearTimeout(timeout); // Cleanup function
+    }, []); // Empty dependency array ensures it runs only once
+  
   return (
     <div className="grid  place-content-center  p-1">
-      <EncryptButton />
+      {isTextVisible && <EncryptButton />}
     </div>
   );
 };
 
-const TARGET_TEXT = "Is there a Person  ";
+const TARGET_TEXT = "behind every Story? ";
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
 
