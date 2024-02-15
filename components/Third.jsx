@@ -59,18 +59,16 @@ const EncryptButton = () => {
       }, SHUFFLE_TIME);
     };
   
+
     const stopScramble = () => {
-      clearInterval(intervalRef.current || undefined);
-      setText(TARGET_TEXT);
-      setIsScrambling(false); // Reset scrambling state
-    };
-  
-    useEffect(() => {
-      if (text === TARGET_TEXT) {
-        scramble(); // Start the encryption process after the text is visible
-      }
-    }, [text]); // Run when the text changes
-  
+        clearInterval(intervalRef.current || undefined);
+    
+        setText(TARGET_TEXT);
+      };
+      useEffect(() => {
+        scramble(); // Start the encryption process when the component mounts
+      }, []); // Empty dependency array ensures it runs only once
+    
     return (
       <motion.button
         whileHover={{
