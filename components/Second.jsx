@@ -59,8 +59,8 @@ const EncryptButton = () => {
 
   const stopScramble = () => {
     clearInterval(intervalRef.current || undefined);
-
     setText(TARGET_TEXT);
+    setIsScrambling(false); // Reset scrambling state
   };
 
   useEffect(() => {
